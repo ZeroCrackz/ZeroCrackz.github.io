@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satisfactory - ZeroCrackz</title>
+  <link rel="stylesheet" href="/Projet Jeux Cracks WS/styleJEU.css" />
+  <link rel="shortcut icon" href="/Projet Jeux Cracks WS/assets/logo/ZeroCrackz Logo.png">
+</head>
+
+<script>
+    let currentIndex = 0;
+  
+    function changeSlide(direction) {
+      const slider = document.getElementById('imageSlider');
+      const slides = slider.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+  
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+  
+      const offset = -currentIndex * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+  
+  
+<body>
+  <header>
+    <h1><a href="/Projet Jeux Cracks WS/index.html">ZeroCrackz</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/Projet Jeux Cracks WS/index.html">Accueil</a></li>
+        <li><a href="/Projet Jeux Cracks WS/jeux.html">Jeux</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-venir.html">À venir</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-propos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="game-page">
+    <section class="game-header">
+      <img src="/Projet Jeux Cracks WS/assets/img/Jeux/Satisfactory/header.jpg" alt="Nom du Jeu">
+      <div class="game-info">
+        <h2>Satisfactory</h2>
+        <p class="game-meta">
+          🕹️ Genre : Automation | 🗂️ Taille : 25,4 Go | 🌍 Langue : Français/Anglais
+        </p>
+        <br>
+      </div>
+    </section>
+
+    <section class="game-description">
+      <h3 style="color: #00ff00;">À propos du jeu</h3>
+      <p>
+        Satisfactory est un jeu de construction d'usine à la première personne dans un monde ouvert, avec une touche d'exploration et de combat. Jouez seul ou avec des amis, explorez une planète extraterrestre, créez des usines à plusieurs étages et entrez dans le paradis des tapis roulants !
+      </p>
+      <h4 style="color: #00ff00;">Construire</h4>
+      <p>
+        Conquérez la nature en construisant d'immenses usines sur tout le territoire. Développez-vous où vous voulez et comme vous voulez. La planète regorge de ressources naturelles précieuses qui ne demandent qu'à être utilisées. En tant qu'employé de FICSIT, il est de votre devoir de veiller à ce qu'elles soient utilisées à bon escient.
+      </p>
+      <h4 style="color: #00ff00;">Automatiser</h4>
+      <p>
+        Construisez vos usines avec une perfection gracieuse ou construisez des réseaux complexes de bandes transporteuses pour répondre à tous vos besoins. Automatisez les camions et les trains pour atteindre vos lointains avant-postes et veillez à manipuler correctement les liquides en les transportant dans des tuyaux. Il s'agit de minimiser le travail manuel !
+      </p>
+      <h4 style="color: #00ff00;">Explorer et exploiter</h4>
+      <p>
+        Aventurez-vous dans des expéditions à la recherche de nouveaux matériaux et assurez-vous de tout utiliser à bon escient. La nature est à vous et vous offre toutes ses ressources ! Vous avez des véhicules, des jetpacks, des tapis de saut et plus encore à votre disposition pour faciliter vos explorations. Prenez soin de revêtir l’équipement de sécurité adéquat, au cas où vous rencontrez la faune locale.
+      </p>
+      <h3 style="color: #00ff00;">CARACTÉRISTIQUES</h3>
+      <p>
+        • Monde ouvert : Explorez l’immense (30 km2) planète inconnue Massage 2(AB)b, sa faune et ses créatures uniques.
+        <br>
+        <br>
+• Coopération Construisez vous-même votre usine, ou à l’aide de vos amis.
+<br>
+<br>
+• Construction d’usines Vivez la fabrication d’une usine immense en vue à la première personne. Automatisez-la et optimisez-la jusqu’à la perfection pour votre satisfaction personnelle.
+<br>
+<br>
+• Personnalisation: Personnalisez votre propre usine à votre goût. Construisez à haute altitude ou sur les vastes plaines ; respectez le paysage ou bétonnez partout au nom de l’efficacité ; il n’y a presque aucune limite dans la construction de votre usine sur-mesure.
+<br>
+<br>
+• Véhicules: Parcourez le monde avec classe. Utilisez des tapis de saut, des chariots d’usine, des hypertubes, des camions ou des trains.
+      </p>
+    </section>
+
+    <section class="game-gallery">
+        <h3 style="color: #00ff00;">Captures d’écran</h3>
+        <br>
+        <div class="slider-wrapper">
+          <button class="slider-btn prev" onclick="changeSlide(-1)">←</button>
+          <div class="slider" id="imageSlider">
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/526870/ss_9083ccf8fbb22c4068a6e233e3de343f815f9dc1.600x338.jpg?t=1748852962" alt="Screenshot 1" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/526870/ss_b1104309f1c22c85de6ad6c401e6d889411c14d2.600x338.jpg?t=1748852962" alt="Screenshot 2" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/526870/ss_b3609e0de9c0af3953b2c53bb9e7a741ad924948.600x338.jpg?t=1748852962" alt="Screenshot 3" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/526870/ss_c42d82beff342eb1ce7a40b3015a27968655df40.600x338.jpg?t=1748852962" alt="Screenshot 4" /></div>
+          </div>
+          <button class="slider-btn next" onclick="changeSlide(1)">→</button>
+        </div>
+      </section>
+                      
+
+    <section class="game-links">
+      <h3>Liens de téléchargement</h3>
+      <ul>
+        <li><a class="download-button" href="https://thenewscasts.com/view/uuhl" target="_blank" style="color: white;">Lien de téléchargement du Jeu</a></li>
+        <br>
+        <br>
+        <li><a class="download-button" href="https://thenewscasts.com/view/214d" target="_blank" style="color: white;">Lien de téléchargement du Steam-Fix</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ZeroCrackz. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

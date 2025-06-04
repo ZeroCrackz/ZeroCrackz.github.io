@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule I - ZeroCrackz</title>
+  <link rel="stylesheet" href="/Projet Jeux Cracks WS/styleJEU.css" />
+  <link rel="shortcut icon" href="/Projet Jeux Cracks WS/assets/logo/ZeroCrackz Logo.png">
+</head>
+
+<script>
+    let currentIndex = 0;
+  
+    function changeSlide(direction) {
+      const slider = document.getElementById('imageSlider');
+      const slides = slider.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+  
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+  
+      const offset = -currentIndex * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+  
+  
+<body>
+  <header>
+    <h1><a href="/Projet Jeux Cracks WS/index.html">ZeroCrackz</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/Projet Jeux Cracks WS/index.html">Accueil</a></li>
+        <li><a href="/Projet Jeux Cracks WS/jeux.html">Jeux</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-venir.html">À venir</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-propos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="game-page">
+    <section class="game-header">
+      <img src="/Projet Jeux Cracks WS/assets/img/Jeux/Schedule I/header.jpg" alt="Nom du Jeu">
+      <div class="game-info">
+        <h2>Schedule I</h2>
+        <p class="game-meta">
+          🕹️ Genre : Simulation | 🗂️ Taille : 7 Go | 🌍 Langue : Français/Anglais
+        </p>
+        <br>
+      </div>
+    </section>
+    
+    <section class="game-description">
+      <h3 style="color: #00ff00;">À propos du jeu</h3>
+      <p>
+        Vous êtes un petit trafiquant de drogue qui débarque dans une nouvelle ville sans argent, sans produit et sans relations. Construisez votre empire de la drogue à partir de rien dans la ville de Hyland Point, sur la côte ouest. Affrontez des forces de l'ordre de plus en plus nombreuses et des cartels mortels pour développer votre empire et atteindre le sommet de la pègre.
+      </p>
+      <h4 style="color: #00ff00;">Fabrication</h4>
+      <p>
+        Produisez une gamme de médicaments pour satisfaire vos clients, chacun avec son propre processus de production. Découvrez des recettes spéciales pour créer de nouvelles variantes de médicaments aux propriétés particulières.
+      </p>
+      <h4 style="color: #00ff00;">Distribuer</h4>
+      <p>
+        Parcourez Hyland Point à pied, en skate ou en voiture pour mettre vos produits entre les mains des clients. Engagez des revendeurs qui se chargeront de la distribution pour vous.
+      </p>
+      <h4 style="color: #00ff00;">Ce Développer</h4>
+      <p>
+        Acheter de nouvelles propriétés et embaucher des employés pour étendre la portée et l'échelle de vos opérations. Travailler avec des fournisseurs pour mettre en place une chaîne de production et de distribution entièrement automatisée.
+      </p>
+      <h3 style="color: #00ff00;">Combat</h3>
+      <p>
+        Il s'agit d'un travail dangereux : vous devrez faire face à des forces de l'ordre de plus en plus nombreuses, ainsi qu'à des cartelistes mortels. Combattez avec vos poings, des armes de mêlée ou des armes à feu.
+      </p>
+      <h3 style="color: #00ff00;">Travaillez Ensemble</h3>
+      <p>
+        Un empire en pleine expansion a besoin d'une gestion compétente. Atteignez de nouveaux sommets en mode multijoueur coopératif.
+      </p>
+    </section>
+
+    <section class="game-gallery">
+        <h3 style="color: #00ff00;">Captures d’écran</h3>
+        <br>
+        <div class="slider-wrapper">
+          <button class="slider-btn prev" onclick="changeSlide(-1)">←</button>
+          <div class="slider" id="imageSlider">
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3164500/ss_74961b6f52d7694b12c272c37d69551fc08a1ccb.600x338.jpg?t=1748368581" alt="Screenshot 1" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3164500/ss_a73fcfbee67d95dd53858d0f3fb881181e0e9e8e.600x338.jpg?t=1748368581" alt="Screenshot 2" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3164500/c792894199193adc8b04cf16b2fec45c5701b0f2/ss_c792894199193adc8b04cf16b2fec45c5701b0f2.600x338.jpg?t=1748368581" alt="Screenshot 3" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3164500/550e3601d7d6515670e82e474bb2a8375a54b361/ss_550e3601d7d6515670e82e474bb2a8375a54b361.600x338.jpg?t=1748368581" alt="Screenshot 4" /></div>
+          </div>
+          <button class="slider-btn next" onclick="changeSlide(1)">→</button>
+        </div>
+      </section>
+                      
+
+    <section class="game-links">
+      <h3>Liens de téléchargement</h3>
+      <ul>
+        <li><a class="download-button" href="https://thenewscasts.com/view/7asd" target="_blank" style="color: white;">Lien de téléchargement du Jeu</a></li>
+        <br>
+        <br>
+        <li><a class="download-button" href="https://thenewscasts.com/view/wbwu" target="_blank" style="color: white;">Lien de téléchargement du Steam-Fix</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ZeroCrackz. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

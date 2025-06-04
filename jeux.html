@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeux | ZeroCrackz</title>
+  <link rel="shortcut icon" href="./assets/logo/ZeroCrackz logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">ZeroCrackz</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./jeux.html">Jeux</a></li>
+        <li><a href="./a-venir.html">À venir</a></li>
+        <li><a href="./a-propos.html">À propos</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar" style="position: relative;">
+        <input type="text" id="searchInput" placeholder="Rechercher un jeu...">
+        <div id="searchResults" style="
+          position: absolute; 
+          top: 100%; 
+          left: 0; 
+          right: 0; 
+          background: #1a1a1a; 
+          border: 1px solid #00ff00; 
+          max-height: 200px; 
+          overflow-y: auto; 
+          z-index: 1000;
+          display: none;
+        "></div>
+      </div>
+  </header>
+
+  <main>
+    <section class="featured">
+      <h1>Jeux Récents</h1>
+      <div class="games-grid" id="gamesGrid">
+        <!-- Exemple de 10 jeux -->
+        <!-- Les 6 premiers sont visibles, les suivants ont la classe hidden -->
+        <div class="game-card"><img src="./assets/img/Jeux/Satisfactory/header.jpg" alt=""><h2>Satisfactory</h2><p>Automation | 2024</p><a href="./jeux page/Satisfactory.html" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Schedule I/header.jpg" alt=""><h2>Schedule I</h2><p>Simulation | 2025</p><a href="./jeux page/scheduleI.html" class="download-btn">Voir plus</a></div>
+        <!-- <div class="game-card"><img src="./assets/img/Jeux/Game3.jpg" alt=""><h2>Game 3</h2><p>Action | 2023</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game4.jpg" alt=""><h2>Game 4</h2><p>Aventure | 2022</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game5.jpg" alt=""><h2>Game 5</h2><p>Stratégie | 2025</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game6.jpg" alt=""><h2>Game 6</h2><p>RPG | 2024</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game7.jpg" alt=""><h2>Game 7</h2><p>Course | 2023</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game8.jpg" alt=""><h2>Game 8</h2><p>FPS | 2022</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game9.jpg" alt=""><h2>Game 9</h2><p>Survie | 2025</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game10.jpg" alt=""><h2>Game 10</h2><p>Simulation | 2024</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game7.jpg" alt=""><h2>Game 11</h2><p>Course | 2023</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game8.jpg" alt=""><h2>Game 12</h2><p>FPS | 2022</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game9.jpg" alt=""><h2>Game 13</h2><p>Survie | 2025</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card"><img src="./assets/img/Jeux/Game10.jpg" alt=""><h2>Game 14</h2><p>Simulation | 2024</p><a href="#" class="download-btn">Voir plus</a></div> -->
+
+        <!-- Cachés au départ -->
+        <!-- <div class="game-card hidden"><img src="./assets/img/Jeux/Game7.jpg" alt=""><h2>Game 7</h2><p>Course | 2023</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card hidden"><img src="./assets/img/Jeux/Game8.jpg" alt=""><h2>Game 8</h2><p>FPS | 2022</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card hidden"><img src="./assets/img/Jeux/Game9.jpg" alt=""><h2>Game 9</h2><p>Survie | 2025</p><a href="#" class="download-btn">Voir plus</a></div>
+        <div class="game-card hidden"><img src="./assets/img/Jeux/Game10.jpg" alt=""><h2>Game 10</h2><p>Simulation | 2024</p><a href="#" class="download-btn">Voir plus</a></div> -->
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button id="showMoreBtn" class="download-btn">Voir plus</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ZeroCrackz. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("showMoreBtn");
+    btn.addEventListener("click", () => {
+      const hiddenCards = document.querySelectorAll(".game-card.hidden");
+      hiddenCards.forEach((card, index) => {
+        if (index < 3) {
+          card.classList.remove("hidden");
+        }
+      });
+      if (document.querySelectorAll(".game-card.hidden").length === 0) {
+        btn.style.display = "none";
+      }
+    });
+  </script>
+
+<script>
+    const jeux = [
+      { nom: "Satisfactory", lien: "./jeux page/Satisfactory.html" },
+      { nom: "Schedule I", lien: "./jeux page/scheduleI.html" },
+      { nom: "", lien: "#" },
+      { nom: "", lien: "#" },
+      { nom: "", lien: "#" }
+    ];
+  
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+  
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      searchResults.innerHTML = '';
+  
+      if (!query) {
+        searchResults.style.display = 'none';
+        return;
+      }
+  
+      const matches = jeux.filter(jeu => jeu.nom.toLowerCase().includes(query));
+  
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<div style="padding: 0.5rem; color: #aaa;">Aucun jeu trouvé</div>';
+        searchResults.style.display = 'block';
+        return;
+      }
+  
+      matches.forEach(jeu => {
+        const div = document.createElement('div');
+        div.textContent = jeu.nom;
+        div.style.padding = '0.5rem';
+        div.style.cursor = 'pointer';
+        div.style.borderBottom = '1px solid #333';
+  
+        div.addEventListener('click', () => {
+          window.location.href = jeu.lien;
+        });
+  
+        div.addEventListener('mouseover', () => {
+          div.style.backgroundColor = '#00ff00';
+          div.style.color = '#0d0d0d';
+        });
+  
+        div.addEventListener('mouseout', () => {
+          div.style.backgroundColor = '';
+          div.style.color = '#e0e0e0';
+        });
+  
+        searchResults.appendChild(div);
+      });
+  
+      searchResults.style.display = 'block';
+    });
+  
+    // Optionnel : cacher la liste si clic en dehors
+    document.addEventListener('click', e => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
