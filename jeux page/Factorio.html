@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factorio - ZeroCrackz</title>
+  <link rel="stylesheet" href="/Projet Jeux Cracks WS/styleJEU.css" />
+  <link rel="shortcut icon" href="/Projet Jeux Cracks WS/assets/logo/ZeroCrackz Logo.png">
+</head>
+
+<script>
+    let currentIndex = 0;
+  
+    function changeSlide(direction) {
+      const slider = document.getElementById('imageSlider');
+      const slides = slider.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+  
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+  
+      const offset = -currentIndex * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+  
+  
+<body>
+  <header>
+    <h1><a href="/Projet Jeux Cracks WS/index.html">ZeroCrackz</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/Projet Jeux Cracks WS/index.html">Accueil</a></li>
+        <li><a href="/Projet Jeux Cracks WS/jeux.html">Jeux</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-venir.html">À venir</a></li>
+        <li><a href="/Projet Jeux Cracks WS/a-propos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="game-page">
+    <section class="game-header">
+      <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/header.jpg?t=1730307306" alt="Nom du Jeu">
+      <div class="game-info">
+        <h2>Factorio</h2>
+        <p class="game-meta">
+          🕹️ Genre : Automation | 🗂️ Taille : 10 Go | 🌍 Langue : Français/Anglais
+        </p>
+        <br>
+      </div>
+    </section>
+
+    <section class="game-description">
+      <h3 style="color: #00ff00;">À propos du jeu</h3>
+      <p>
+        <strong>Factorio</strong> est un jeu dans lequel vous construisez et entretenez des usines. Vous exploitez des ressources, recherchez des technologies, construisez des infrastructures, automatisez la production et combattez des ennemis. Au début, vous devrez couper des arbres, extraire des minerais et fabriquer des bras mécaniques et des courroies de transport à la main, mais en peu de temps, vous pourrez devenir une puissance industrielle, avec d'immenses champs solaires, le raffinage et le craquage du pétrole, la fabrication et le déploiement de robots de construction et de logistique, tout cela pour répondre à vos besoins en ressources. Cependant, cette exploitation intensive des ressources de la planète n'est pas du goût de la population locale, et vous devrez donc être prêt à vous défendre et à défendre votre empire de machines.
+    <br>
+    <br>
+        Joignez vos forces à celles d'autres joueurs dans un mode multijoueur coopératif, créez d'immenses usines, collaborez et déléguez des tâches entre vous et vos amis. Ajoutez des mods pour augmenter votre plaisir, qu'il s'agisse de petites améliorations, de mods d'aide ou de refontes complètes du jeu, le support de Factorio a permis à des créateurs de contenu du monde entier de concevoir des fonctionnalités intéressantes et innovantes. Alors que le cœur du jeu se présente sous la forme d'un scénario de jeu libre, il existe une gamme de défis intéressants sous la forme de Scénarios. Si vous ne trouvez pas de cartes ou de scénarios qui vous plaisent, vous pouvez créer les vôtres à l'aide de l'éditeur de cartes du jeu, placer les entités, les ennemis et le terrain comme bon vous semble, et même ajouter vos propres scripts pour rendre le jeu intéressant.
+        
+      </p>
+    </section>
+
+    <section class="game-gallery">
+        <h3 style="color: #00ff00;">Captures d’écran</h3>
+        <br>
+        <div class="slider-wrapper">
+          <button class="slider-btn prev" onclick="changeSlide(-1)">←</button>
+          <div class="slider" id="imageSlider">
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/ss_171f398a8e347fad650a9c1b6c3b77c612781510.600x338.jpg?t=1730307306" alt="Screenshot 1" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/ss_0bf814493f247b6baa093511b46c352cf9e98435.600x338.jpg?t=1730307306" alt="Screenshot 2" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/ss_2533e54b0bd90a29adbedb60108ed277536ad445.600x338.jpg?t=1730307306" alt="Screenshot 3" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/ss_124dc8dc3fd282f6feb2d9ee20aebd2d73188e02.600x338.jpg?t=1730307306" alt="Screenshot 4" /></div>
+            <div class="slide"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/427520/ss_0e6d3c0d1af06fcde28ef1f1703e142f416ace44.600x338.jpg?t=1730307306" alt="Screenshot 5" /></div>
+          </div>
+          <button class="slider-btn next" onclick="changeSlide(1)">→</button>
+        </div>
+      </section>
+                      
+
+    <section class="game-links">
+      <h3>Liens de téléchargement</h3>
+      <ul>
+        <li><a class="download-button" href="https://thenewscasts.com/view/mk4o" target="_blank" style="color: white;">Lien de téléchargement du Jeu</a></li>
+        <br>
+        <br>
+        <li><a class="download-button" href="https://thenewscasts.com/view/nrfz" target="_blank" style="color: white;">Lien de téléchargement du Steam-Fix</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ZeroCrackz. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
